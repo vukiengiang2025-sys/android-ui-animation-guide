@@ -2,45 +2,32 @@
 
 ## Overview
 
-Material Design gives you a system for color, spacing, shape, elevation, and state styling.
+Material Design provides a consistent visual system for building clean, modern Android interfaces.
 
-## Key principles
+## Key areas
 
-- color hierarchy
-- consistent spacing scale
-- rounded shapes
-- readability and contrast
-- clear states
-- elevation and depth
+- typography
+- spacing
+- color system
+- shapes and corner radius
+- elevation and shadows
+- state styling
+- motion curves
 
-## Important UI elements
+## Material 3 focus
 
-- app bars
-- buttons
-- cards
-- chips
-- text fields
-- bottom sheets
-- navigation bars
+- softer surfaces
+- dynamic colors
+- high readability
+- modern card surfaces
+- clear contrast and hierarchy
 
-## Example Material Card
+## Example
 
 ```xml
 <com.google.android.material.card.MaterialCardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="18dp"
-    app:cardElevation="8dp" />
+    app:cardElevation="6dp" />
 ```
-
-## Design quality checklist
-
-- Does each screen have hierarchy?
-- Is CTA clear and visible?
-- Does the design feel consistent?
-- Is contrast good enough for readability?
-- Does motion support the design but not distract?
-
-## Recommended app style
-
-Use a visual system based on soft blue, deep navy, rounded corners, and light shadow for a premium modern look.

@@ -2,49 +2,30 @@
 
 ## Overview
 
-Animation in Android is used to provide feedback, create flow, and make the app feel responsive and premium.
+Animation helps the product feel alive and responsive. Used well, it creates confidence and polish. Used poorly, it distracts users.
 
 ## Main animation types
 
-### View animation
-Simple visual movement on a view.
+- `AlphaAnimation`
+- `TranslateAnimation`
+- `RotateAnimation`
+- `ScaleAnimation`
+- `ObjectAnimator`
+- `ValueAnimator`
+- `AnimatorSet`
+- `Transition`
+- `MotionLayout`
+- `Lottie`
+
+## Good rule
+
+Use animation to direct attention and confirm actions, not to decorate every item in the UI.
+
+## Example
 
 ```kotlin
-val fade = AlphaAnimation(0f, 1f)
-fade.duration = 500
-textView.startAnimation(fade)
-```
-
-### Property animation
-Best for modern apps.
-
-```kotlin
-ObjectAnimator.ofFloat(button, "scaleY", 1f, 0.9f, 1f).apply {
-    duration = 200
+ObjectAnimator.ofFloat(button, "translationY", 0f, -10f, 0f).apply {
+    duration = 250
     start()
 }
 ```
-
-### Transition animation
-For activity/fragment navigation and shared elements.
-
-### MotionLayout
-For richer screen and layout animations.
-
-### Lottie
-For complex illustrated animations.
-
-## When to use which
-
-- Click feedback: property animation
-- Loading states: Lottie / shimmer / progress
-- Screen entry: slide/fade transition
-- Complex flow: MotionLayout
-- Illustration: Lottie
-
-## Good animation rules
-
-- Keep it subtle
-- Make motion meaningful
-- Avoid overusing effects
-- Respect user motion preferences

@@ -2,21 +2,30 @@
 
 ## Overview
 
-Layout is the foundation of Android UI. Good layout design determines readability, alignment, hierarchy, and overall app quality.
+Good layout is the foundation of every good app. Better layout leads to cleaner hierarchy, clearer navigation, and smoother motion.
 
-## Main layout tools
+## Core layout tools
 
-- `LinearLayout`
-- `RelativeLayout`
 - `ConstraintLayout`
-- `RecyclerView`
+- `LinearLayout`
 - `FrameLayout`
-- `CardView`
+- `RecyclerView`
 - `MaterialCardView`
+- `BottomNavigationView`
 
-## Preferred approach
+## Best practice
 
-For modern Android, `ConstraintLayout` is the best default choice.
+Use `ConstraintLayout` as the main container for modern screens. Combine it with cards, lists, and section spacing to produce a clean dashboard or product UI.
+
+## Key design principles
+
+- keep hierarchy visible
+- group items logically
+- use consistent spacing scale
+- emphasize primary actions
+- balance information density
+
+## Example
 
 ```xml
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,30 +36,9 @@ For modern Android, `ConstraintLayout` is the best default choice.
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
-
-## Layout principles
-
-- Use consistent spacing
-- Keep hierarchy simple
-- Use padding and margins intentionally
-- Group related content into cards or sections
-- Make primary actions obvious
-
-## Screen composition ideas
-
-- hero header
-- summary cards
-- action buttons
-- list section
-- detail description area
-
-## Best practice
-
-Use Material Design spacing and alignment rules. A clean layout is the baseline for good animation.

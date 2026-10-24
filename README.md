@@ -1,16 +1,18 @@
 # Android UI & Animation Guide
 
-A modern repository for learning Android design, UI composition, and animation.
+A curated Android learning repository focused on modern UI, Material Design, and motion-driven experiences.
 
-## Why this repo exists
+## Overview
 
-This repo is designed to help you:
+This repository is designed for developers who want to build attractive, interactive Android screens with a strong UI foundation. It covers:
 
-- learn Android layout systems
-- understand modern UI design patterns
-- practice motion and interaction design
-- build polished app screens with animation
-- move from theory to real UI implementation
+- layouts and screen composition
+- Material Design system
+- animation principles and patterns
+- MotionLayout and advanced transitions
+- Lottie and vector animation
+- Jetpack Compose UI and state-driven animations
+- practical UX and micro-interactions
 
 ## Repository structure
 
@@ -32,74 +34,72 @@ android-ui-animation-guide/
 │   ├── app/
 │   ├── build.gradle.kts
 │   └── settings.gradle.kts
-└── LICENSE
+├── LICENSE
+└── project-notes/
+    └── TODO.md
 ```
 
-## Topics covered
+## Topics included
 
 ### Layout
-- ConstraintLayout
-- CardView, MaterialCardView
-- RecyclerView and list layouts
-- Screen structure and spacing
+- ConstraintLayout-based screen design
+- cards, lists, and dashboard composition
+- spacing and visual hierarchy
 
 ### Animation
-- View animation
-- Property animation
-- Transition animation
+- alpha, scale, rotation, translation
+- object animation
+- transitions
 - MotionLayout
-- Lottie and vector animation
+- Lottie
+- Compose animation system
 
 ### Material Design
-- colors
+- color system
 - typography
-- shape
 - elevation
-- dark mode
-- component hierarchy
+- shapes and components
+- dark mode and premium visuals
 
 ### Compose
 - `AnimatedVisibility`
 - `animateContentSize`
-- `spring` and `tween`
-- state-based animation
+- `animateFloatAsState`
+- `rememberInfiniteTransition`
+- state-driven motion design
 
 ### UX
 - micro-interactions
-- smooth transitions
+- onboarding motion
 - loading states
-- accessibility and timing
+- bottom sheets and feedback
+- accessibility and smooth transitions
 
 ## Recommended learning order
 
 1. Layout fundamentals
 2. Material Design basics
-3. Animation types
-4. Motion and transitions
-5. Lottie and advanced effects
-6. Compose patterns
-7. Build polished screens in a sample app
+3. Animation principles
+4. MotionLayout / transitions
+5. Lottie and loading states
+6. Compose animation
+7. Build a polished product flow
 
-## Included sample screens
+## Demo app flow
 
-This repo now includes a sample app flow with:
+The sample app in this repo includes:
 
 - Login screen
 - Onboarding screen
 - Home dashboard
-- Detail screen
-- Bottom sheet interaction
-- Simple motion animation layer
+- Product detail screen
+- Search screen
+- Profile screen
+- Cart screen
+- Bottom sheet examples
+- Animated UI and motion feedback
 
-## Start with the docs
-
-- [Layout](docs/01-layout/README.md)
-- [Animation](docs/02-animation/README.md)
-- [Material](docs/03-material/README.md)
-- [Compose](docs/04-compose/README.md)
-- [UX](docs/05-ux/README.md)
-
-## Quick example
+## Example animation snippet
 
 ```kotlin
 ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.96f, 1f).apply {
@@ -108,16 +108,13 @@ ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.96f, 1f).apply {
 }
 ```
 
-## Suggested path for your app
+## Best practices
 
-If you are building a real Android app, start with this order:
-
-- Login screen
-- Home dashboard
-- Product or item detail
-- Loading and success states
-- Bottom sheets and dialogs
-- Transition animation between screens
+- Use motion only when it adds clarity
+- Keep transitions smooth and subtle
+- Maintain consistent spacing and shadows
+- Favor Material 3 styling for a modern look
+- Use animation to guide, not distract
 
 ## License
 
