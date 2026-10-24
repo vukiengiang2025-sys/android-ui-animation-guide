@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product summary"
+        android:textColor="#111827"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Premium quality, active heart-rate tracking, all-day comfort, seamless app sync, and a refined modern design."
+        android:textColor="#4B5563"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/closeBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#5A6CF5"
+        android:text="Close"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

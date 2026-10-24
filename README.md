@@ -1,32 +1,16 @@
 # Android UI & Animation Guide
 
-A curated learning repository for Android interface design and animation.
+A modern repository for learning Android design, UI composition, and animation.
 
-This repo helps you study how to build modern, interactive, and polished Android screens using:
+## Why this repo exists
 
-- Android layouts and UI components
-- Material Design principles
-- View Animation and Property Animation
-- MotionLayout and screen transitions
-- Lottie and vector animations
-- Jetpack Compose animation APIs
-- Real-world UI patterns and interaction design
+This repo is designed to help you:
 
-## What is inside
-
-- `docs/` — theory, roadmap, UI fundamentals, design patterns
-- `examples/` — sample code snippets for basic and advanced UI animation
-- `sample-app/` — a mini Android app demo with a polished screen and animation flow
-
-## Recommended learning path
-
-1. Android UI fundamentals
-2. Material Design and component hierarchy
-3. Animation basics
-4. Property animation and screen transitions
-5. MotionLayout and advanced interactions
-6. Lottie / vector animation
-7. Compose animation and polished UX
+- learn Android layout systems
+- understand modern UI design patterns
+- practice motion and interaction design
+- build polished app screens with animation
+- move from theory to real UI implementation
 
 ## Repository structure
 
@@ -34,96 +18,107 @@ This repo helps you study how to build modern, interactive, and polished Android
 android-ui-animation-guide/
 ├── README.md
 ├── docs/
-│   ├── 01-android-ui-roadmap.md
-│   ├── 02-animation-types.md
-│   ├── 03-practical-implementation-guide.md
-│   ├── 04-ui-components.md
-│   └── 05-ux-patterns.md
+│   ├── 01-layout/
+│   ├── 02-animation/
+│   ├── 03-material/
+│   ├── 04-compose/
+│   └── 05-ux/
 ├── examples/
 │   ├── 01-basic-animations/
 │   ├── 02-motionlayout/
 │   ├── 03-lottie/
-│   ├── 04-compose/
-│   └── 05-advanced-ui/
+│   └── 04-compose/
 ├── sample-app/
+│   ├── app/
 │   ├── build.gradle.kts
-│   ├── settings.gradle.kts
-│   └── app/
-│       ├── build.gradle.kts
-│       └── src/main/
-│           ├── java/com/example/androiduidemo/
-│           └── res/
+│   └── settings.gradle.kts
 └── LICENSE
 ```
 
-## Quick start
+## Topics covered
 
-### 1) Learn the basics
-Open the docs in this order:
+### Layout
+- ConstraintLayout
+- CardView, MaterialCardView
+- RecyclerView and list layouts
+- Screen structure and spacing
 
-- [01-android-ui-roadmap.md](docs/01-android-ui-roadmap.md)
-- [02-animation-types.md](docs/02-animation-types.md)
-- [03-practical-implementation-guide.md](docs/03-practical-implementation-guide.md)
+### Animation
+- View animation
+- Property animation
+- Transition animation
+- MotionLayout
+- Lottie and vector animation
 
-### 2) Review code examples
-Study the examples in `examples/` to understand how different animations are applied in real screens.
+### Material Design
+- colors
+- typography
+- shape
+- elevation
+- dark mode
+- component hierarchy
 
-### 3) Run the sample app
-Open `sample-app/` as a starter Android project and run it in Android Studio.
+### Compose
+- `AnimatedVisibility`
+- `animateContentSize`
+- `spring` and `tween`
+- state-based animation
 
-## Core topics covered
+### UX
+- micro-interactions
+- smooth transitions
+- loading states
+- accessibility and timing
 
-- ConstraintLayout and screen composition
-- Button interactions and ripple feedback
-- Card, image, list, and navigation patterns
-- Fade, scale, translate, and rotate animations
-- `ObjectAnimator`, `ValueAnimator`, and `AnimatorSet`
-- MotionLayout for interactive transitions
-- Lottie animation integration
-- Compose animation APIs
-- Dark mode, elevation, shape, and spacing
-- Real UX and micro-interaction ideas
+## Recommended learning order
 
-## Example animation types
+1. Layout fundamentals
+2. Material Design basics
+3. Animation types
+4. Motion and transitions
+5. Lottie and advanced effects
+6. Compose patterns
+7. Build polished screens in a sample app
 
-### Basic animation
+## Included sample screens
+
+This repo now includes a sample app flow with:
+
+- Login screen
+- Onboarding screen
+- Home dashboard
+- Detail screen
+- Bottom sheet interaction
+- Simple motion animation layer
+
+## Start with the docs
+
+- [Layout](docs/01-layout/README.md)
+- [Animation](docs/02-animation/README.md)
+- [Material](docs/03-material/README.md)
+- [Compose](docs/04-compose/README.md)
+- [UX](docs/05-ux/README.md)
+
+## Quick example
+
 ```kotlin
-ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.95f, 1f).apply {
-    duration = 200
+ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.96f, 1f).apply {
+    duration = 180
     start()
 }
 ```
 
-### Fade in
-```kotlin
-ObjectAnimator.ofFloat(titleText, "alpha", 0f, 1f).apply {
-    duration = 500
-    start()
-}
-```
+## Suggested path for your app
 
-### MotionLayout transition
-Use a `MotionScene` to animate element positions and sizes across two states.
+If you are building a real Android app, start with this order:
 
-### Compose animation
-```kotlin
-AnimatedVisibility(
-    visible = visible,
-    enter = fadeIn() + slideInVertically()
-) {
-    Text("Hello Android UI")
-}
-```
-
-## Suggested practice projects
-
-- To-do app
-- Shopping app UI
-- News app
-- Travel booking screen
-- Fitness dashboard
-- Onboarding flow with Lottie
+- Login screen
+- Home dashboard
+- Product or item detail
+- Loading and success states
+- Bottom sheets and dialogs
+- Transition animation between screens
 
 ## License
 
-This project is licensed under the MIT License.
+MIT
