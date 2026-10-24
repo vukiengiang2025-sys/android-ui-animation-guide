@@ -1,18 +1,22 @@
 # Android UI & Animation Guide
 
-A curated Android learning repository focused on modern UI, Material Design, and motion-driven experiences.
+A modern Android learning repository focused on UI composition, Material Design, and motion-driven app experiences.
 
 ## Overview
 
-This repository is designed for developers who want to build attractive, interactive Android screens with a strong UI foundation. It covers:
+This repo is designed for developers who want to build clean, premium-feeling Android app interfaces with a strong understanding of:
 
-- layouts and screen composition
-- Material Design system
-- animation principles and patterns
-- MotionLayout and advanced transitions
-- Lottie and vector animation
-- Jetpack Compose UI and state-driven animations
-- practical UX and micro-interactions
+- layout systems
+- Material Design and theming
+- animations and micro-interactions
+- screen flows and product UX
+- Compose-based modern UI design
+
+## Included content
+
+- `docs/` with topic-based material for layout, animation, Material, Compose, and UX
+- `examples/` with XML + Kotlin examples for animation and MotionLayout
+- `sample-app/` with a Compose-first demo app covering login, onboarding, home, search, cart, and profile screens
 
 ## Repository structure
 
@@ -34,87 +38,81 @@ android-ui-animation-guide/
 │   ├── app/
 │   ├── build.gradle.kts
 │   └── settings.gradle.kts
+├── project-notes/
+│   └── TODO.md
 ├── LICENSE
-└── project-notes/
-    └── TODO.md
+└── .gitignore
 ```
 
-## Topics included
+## Demo app flow
+
+The sample app now includes a modern product flow with:
+
+- Login screen
+- Onboarding screen
+- Home dashboard
+- Search screen
+- Cart screen
+- Profile screen
+- Material 3 theme
+- Compose-based animation and motion UI
+
+## Topics covered
 
 ### Layout
-- ConstraintLayout-based screen design
-- cards, lists, and dashboard composition
-- spacing and visual hierarchy
+- ConstraintLayout
+- cards and section layout
+- spacing and hierarchy
+- reusable dashboard blocks
 
 ### Animation
-- alpha, scale, rotation, translation
-- object animation
-- transitions
-- MotionLayout
-- Lottie
-- Compose animation system
+- button scale and feedback
+- staggered list reveal
+- composed motion transitions
+- bottom sheet and popup motion
+- onboarding and loading feedback
 
 ### Material Design
 - color system
 - typography
+- surface style
+- shapes
 - elevation
-- shapes and components
-- dark mode and premium visuals
+- responsive UI spacing
 
 ### Compose
 - `AnimatedVisibility`
 - `animateContentSize`
 - `animateFloatAsState`
 - `rememberInfiniteTransition`
-- state-driven motion design
+- Material 3 styling
 
 ### UX
 - micro-interactions
-- onboarding motion
-- loading states
-- bottom sheets and feedback
-- accessibility and smooth transitions
+- navigation feedback
+- accessibility-friendly motion
+- onboarding and summary flows
 
-## Recommended learning order
-
-1. Layout fundamentals
-2. Material Design basics
-3. Animation principles
-4. MotionLayout / transitions
-5. Lottie and loading states
-6. Compose animation
-7. Build a polished product flow
-
-## Demo app flow
-
-The sample app in this repo includes:
-
-- Login screen
-- Onboarding screen
-- Home dashboard
-- Product detail screen
-- Search screen
-- Profile screen
-- Cart screen
-- Bottom sheet examples
-- Animated UI and motion feedback
-
-## Example animation snippet
+## Quick example
 
 ```kotlin
-ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.96f, 1f).apply {
-    duration = 180
-    start()
+AnimatedVisibility(
+    visible = expanded,
+    enter = fadeIn() + slideInVertically()
+) {
+    Text("Expanded content")
 }
 ```
 
-## Best practices
+## Suggested learning order
 
-- Use motion only when it adds clarity
-- Keep transitions smooth and subtle
-- Maintain consistent spacing and shadows
-- Favor Material 3 styling for a modern look
-- Use animation to guide, not distract
+1. Layout fundamentals
+2. Material Design language
+3. Animation basics and timing
+4. MotionLayout and transitions
+5. Lottie and advanced motion
+6. Jetpack Compose UI patterns
+7. Build a full premium app flow
 
 ## License
 
