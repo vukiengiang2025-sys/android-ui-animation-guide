@@ -1,61 +1,92 @@
 # Android UI & Animation Guide
 
-Repo này được tạo để gom tất cả các kiến thức, mẫu code và hướng dẫn liên quan đến:
+A curated learning repository for Android interface design and animation.
 
-- Android UI / Layout
-- Material Design
-- View Animation
-- Property Animation
-- MotionLayout
-- AnimatedVectorDrawable
-- Lottie
-- Jetpack Compose animation
-- UX/UI patterns thực tế trong app Android
+This repo helps you study how to build modern, interactive, and polished Android screens using:
 
-Mục tiêu: giúp bạn dễ theo dõi, học và áp dụng vào dự án thật.
+- Android layouts and UI components
+- Material Design principles
+- View Animation and Property Animation
+- MotionLayout and screen transitions
+- Lottie and vector animations
+- Jetpack Compose animation APIs
+- Real-world UI patterns and interaction design
 
-## Cấu trúc repo
+## What is inside
 
-- `README.md` – tổng quan repo
-- `docs/01-android-ui-roadmap.md` – lộ trình học Android UI
-- `docs/02-animation-types.md` – tổng hợp các loại animation trong Android
-- `docs/03-practical-implementation-guide.md` – cách tích hợp animation vào app thực tế
-- `examples/01-basic-animations/` – ví dụ animation cơ bản bằng XML + Kotlin
-- `examples/02-motionlayout/` – ví dụ MotionLayout
-- `examples/03-lottie/` – ví dụ Lottie animation
-- `examples/04-compose/` – ví dụ Compose animation
+- `docs/` — theory, roadmap, UI fundamentals, design patterns
+- `examples/` — sample code snippets for basic and advanced UI animation
+- `sample-app/` — a mini Android app demo with a polished screen and animation flow
 
-## Học theo thứ tự
+## Recommended learning path
 
-1. Layout cơ bản: ConstraintLayout, RecyclerView, CardView
-2. Material Design: theme, colors, shape, typography
-3. Animation cơ bản: alpha, scale, rotate, translate
-4. Property Animation: ObjectAnimator, ValueAnimator
-5. MotionLayout: chuyển cảnh và layout animation
-6. Lottie: animation phức tạp, loading, onboarding
-7. Compose: animation hiện đại trong UI
+1. Android UI fundamentals
+2. Material Design and component hierarchy
+3. Animation basics
+4. Property animation and screen transitions
+5. MotionLayout and advanced interactions
+6. Lottie / vector animation
+7. Compose animation and polished UX
 
-## Các loại animation cần nắm
+## Repository structure
 
-- View Animation
-- Property Animation
-- Transition animation
-- MotionLayout
-- AnimatedVectorDrawable
-- Lottie
-- Compose animation
-
-## Mẫu ví dụ nhanh
-
-### 1) Fade in
-```kotlin
-ObjectAnimator.ofFloat(textView, "alpha", 0f, 1f).apply {
-    duration = 500
-    start()
-}
+```text
+android-ui-animation-guide/
+├── README.md
+├── docs/
+│   ├── 01-android-ui-roadmap.md
+│   ├── 02-animation-types.md
+│   ├── 03-practical-implementation-guide.md
+│   ├── 04-ui-components.md
+│   └── 05-ux-patterns.md
+├── examples/
+│   ├── 01-basic-animations/
+│   ├── 02-motionlayout/
+│   ├── 03-lottie/
+│   ├── 04-compose/
+│   └── 05-advanced-ui/
+├── sample-app/
+│   ├── build.gradle.kts
+│   ├── settings.gradle.kts
+│   └── app/
+│       ├── build.gradle.kts
+│       └── src/main/
+│           ├── java/com/example/androiduidemo/
+│           └── res/
+└── LICENSE
 ```
 
-### 2) Scale button click
+## Quick start
+
+### 1) Learn the basics
+Open the docs in this order:
+
+- [01-android-ui-roadmap.md](docs/01-android-ui-roadmap.md)
+- [02-animation-types.md](docs/02-animation-types.md)
+- [03-practical-implementation-guide.md](docs/03-practical-implementation-guide.md)
+
+### 2) Review code examples
+Study the examples in `examples/` to understand how different animations are applied in real screens.
+
+### 3) Run the sample app
+Open `sample-app/` as a starter Android project and run it in Android Studio.
+
+## Core topics covered
+
+- ConstraintLayout and screen composition
+- Button interactions and ripple feedback
+- Card, image, list, and navigation patterns
+- Fade, scale, translate, and rotate animations
+- `ObjectAnimator`, `ValueAnimator`, and `AnimatorSet`
+- MotionLayout for interactive transitions
+- Lottie animation integration
+- Compose animation APIs
+- Dark mode, elevation, shape, and spacing
+- Real UX and micro-interaction ideas
+
+## Example animation types
+
+### Basic animation
 ```kotlin
 ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.95f, 1f).apply {
     duration = 200
@@ -63,46 +94,36 @@ ObjectAnimator.ofFloat(button, "scaleX", 1f, 0.95f, 1f).apply {
 }
 ```
 
-### 3) Di chuyển card
+### Fade in
 ```kotlin
-ObjectAnimator.ofFloat(cardView, "translationY", 0f, -20f, 0f).apply {
+ObjectAnimator.ofFloat(titleText, "alpha", 0f, 1f).apply {
     duration = 500
     start()
 }
 ```
 
-## Liên kết nhanh
+### MotionLayout transition
+Use a `MotionScene` to animate element positions and sizes across two states.
 
-- [Lộ trình học Android UI](docs/01-android-ui-roadmap.md)
-- [Các loại animation trong Android](docs/02-animation-types.md)
-- [Hướng dẫn tích hợp animation vào app](docs/03-practical-implementation-guide.md)
+### Compose animation
+```kotlin
+AnimatedVisibility(
+    visible = visible,
+    enter = fadeIn() + slideInVertically()
+) {
+    Text("Hello Android UI")
+}
+```
 
-## Gợi ý phát triển tiếp
+## Suggested practice projects
 
-Nếu bạn muốn tiến sâu hơn, hãy làm các dự án mini sau:
+- To-do app
+- Shopping app UI
+- News app
+- Travel booking screen
+- Fitness dashboard
+- Onboarding flow with Lottie
 
-- App note
-- App task manager
-- App shopping cart
-- App blog/news
-- App booking / travel UI
+## License
 
-Mỗi dự án nên tập trung vào:
-
-- layout đẹp
-- list item animation
-- loading state
-- navigation transition
-- onboarding motion
-- dark theme và accessibility
-
-## Tài liệu tham khảo
-
-- Material Design 3
-- Jetpack Compose documentation
-- Android MotionLayout docs
-- Lottie docs
-
----
-
-Bắt đầu bằng docs trong thư mục `docs/` và các ví dụ trong `examples/`.
+This project is licensed under the MIT License.
